@@ -1,12 +1,13 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+  if (actual.toString() === expected.toString()) {
     console.log(`✔️✔️Assertion Passed: ${actual} ===  ${expected}`);
   } else console.log("❌❌Do not match");
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("hello", "hello");
-assertEqual(143, 1);
+const tail = function (arr){
+  let x = arr.slice(1)
+  return x.toString()
+}
+
+assertEqual(tail([1,2,3,4]),[2,3,4]);
