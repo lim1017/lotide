@@ -29,4 +29,5 @@ let flat=[]
 
 
 
-console.log(flatten([1, 2, [3, 4, 7], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6]
+assertArrayEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6])
