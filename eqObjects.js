@@ -14,8 +14,8 @@ const assertArrayEqual = function(actual, expected) {
   } else console.log(`❌❌Do not match ${actual} !===  ${expected}`);
 };
 const eqArrays = function(arr1, arr2) {
-  if(arr1.length !== arr2.length){
-    return false
+  if (arr1.length !== arr2.length) {
+    return false;
   }
 
   for (let i = 0; i < arr1.length; i++) {
@@ -45,7 +45,7 @@ const eqObjects = function(obj1, obj2) {
       // console.log(obj2[obj1Key], 'obj two key')
       // console.log(eqArrays(obj1[obj1Key], obj2[obj1Key]))
       if (!eqArrays(obj1[obj1Key], obj2[obj1Key])) {
-        return false
+        return false;
       }
     } else if (obj1[obj1Key] !== obj2[obj1Key]) {
       return false;
@@ -58,11 +58,11 @@ const eqObjects = function(obj1, obj2) {
 const ab = { a: "1", b: "2", c: 5 };
 const ba = { b: "2", a: "1", c: 5 };
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, ba), true)
-assertEqual(eqObjects(ab, abc), false)
+assertEqual(eqObjects(ab, ba), true);
+assertEqual(eqObjects(ab, abc), false);
 
 const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
+const dc = { d: ["2", 3 , 5], c: "1" };
 assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };

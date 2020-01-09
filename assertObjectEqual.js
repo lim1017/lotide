@@ -14,8 +14,8 @@ const assertArrayEqual = function(actual, expected) {
   } else console.log(`❌❌Do not match ${actual} !===  ${expected}`);
 };
 const eqArrays = function(arr1, arr2) {
-  if(arr1.length !== arr2.length){
-    return false
+  if (arr1.length !== arr2.length) {
+    return false;
   }
 
   for (let i = 0; i < arr1.length; i++) {
@@ -27,14 +27,15 @@ const eqArrays = function(arr1, arr2) {
 };
 
 //Check Obj equal
-const assertObjEqual = function(actual, expected){
-
-  const inspect = require('util').inspect;
+const assertObjEqual = function(actual, expected) {
+  const inspect = require("util").inspect;
 
   if (eqObjects(actual, expected)) {
-    console.log(`✔️✔️Assertion Passed: ${inspect(actual)} ===  ${inspect(expected)}`);
+    console.log(
+      `✔️✔️Assertion Passed: ${inspect(actual)} ===  ${inspect(expected)}`
+    );
   } else console.log(`❌❌Do not match ${actual} !===  ${expected}`);
-}
+};
 
 const eqObjects = function(obj1, obj2) {
   // console.log(Object.keys(obj1))
@@ -54,7 +55,7 @@ const eqObjects = function(obj1, obj2) {
       // console.log(obj2[obj1Key], 'obj two key')
       // console.log(eqArrays(obj1[obj1Key], obj2[obj1Key]))
       if (!eqArrays(obj1[obj1Key], obj2[obj1Key])) {
-        return false
+        return false;
       }
     } else if (obj1[obj1Key] !== obj2[obj1Key]) {
       return false;
@@ -63,13 +64,6 @@ const eqObjects = function(obj1, obj2) {
 
   return true;
 };
-
-
-
-
-
-
-
 
 //test cases
 const ab = { a: "1", b: "2", c: 5 };
@@ -85,4 +79,5 @@ const dc = { d: ["2", 3], c: "1" };
 const cd2 = { c: "1", d: ["2", 3, 4] };
 // assertEqual(eqObjects(cd, cd2), false); // => false
 
-assertObjEqual(ab, ba)
+console.log(assertObjEqual(ab, ba));
+

@@ -10,14 +10,14 @@ const assertEqual = function(actual, expected) {
 
 const findKeyByValue = function(obj, value){
 
-  // console.log(Object.keys(obj), 'The keys')
-  // console.log(Object.values(obj), 'The values')
+  console.log(Object.keys(obj), 'The keys')
+  console.log(Object.values(obj), 'The values')
 
   let x=Object.values(obj).indexOf(value)
-  // console.log(x, 'is index of the value ' + value)
+  console.log(x, 'is index of the value ' + value)
 
 
-  return Object.keys(obj)[2]    //returning the same index in the keys array
+  return Object.keys(obj)[x]    //returning the same index in the keys array
 }
 
 
@@ -29,4 +29,4 @@ const bestTVShowsByGenre = {
 
 console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama')
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama')
