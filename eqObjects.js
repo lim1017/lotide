@@ -62,7 +62,7 @@ assertEqual(eqObjects(ab, ba), true);
 assertEqual(eqObjects(ab, abc), false);
 
 const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3 , 5], c: "1" };
+const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true); // => true
 
 const cd2 = { c: "1", d: ["2", 3, 4] };

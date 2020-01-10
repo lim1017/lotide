@@ -24,9 +24,9 @@ const map = function(array, callback) {
   let finalOP=[]
 
   for (let item of array) {
-    console.log('item BEFORE: ', item);
-    console.log('item AFTER: ', callback(item));
-    console.log('---');
+    // console.log('item BEFORE: ', item);
+    // console.log('item AFTER: ', callback(item));
+    // console.log('---');
     finalOP.push(callback(item))
   }
 

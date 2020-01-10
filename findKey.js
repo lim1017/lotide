@@ -13,8 +13,8 @@ const findKey = function(obj, callback) {
   //console.log(obj.noma.stars, ' nomas star')
 
   for (name of keyzz) {
-    // console.log(obj[name].stars)
-    // console.log(callback(obj[name]))
+    console.log(obj[name].stars)
+    //console.log(callback(obj[name]))
     if (callback(obj[name])) {
       console.log("The first person with 2 stars is:")
       return name 
