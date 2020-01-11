@@ -55,15 +55,15 @@ const eqObjects = function(obj1, obj2) {
       // console.log(isObject(obj1[obj1Key]), 'am i obj?')
       //console.log(obj1[obj1Key], 'obj1 key')
       //  console.log(obj2[obj1Key], "obj2 key")
-      // console.log(Object.keys(obj1[obj1Key]), 'asdfasdfasdfasdfasdfasdf')
+      // console.log(Object.keys(obj1[obj1Key]))
       // console.log(Object.keys(obj2[obj1Key]))
 
       if (!isObject(obj2[obj1Key])) {
         return false;
       }
-      if (!eqObjects(obj1[obj1Key], obj2[obj1Key])){
+      if (!eqObjects(obj1[obj1Key], obj2[obj1Key])){    //******recursion!!!! */
         return false
-      };
+      } else eqObjects(obj1[obj1Key], obj2[obj1Key])
     } else if (Array.isArray(obj1[obj1Key])) {
       // console.log(obj1[obj1Key], 'obj one key')
       // console.log(obj2[obj1Key], 'obj two key')

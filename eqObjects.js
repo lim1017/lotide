@@ -28,30 +28,41 @@ const eqArrays = function(arr1, arr2) {
 
 //Check Obj equal
 const eqObjects = function(obj1, obj2) {
-  // console.log(Object.keys(obj1))
-  // console.log(Object.keys(obj2))
+  // console.log(Object.keys(obj1),'obj1')
+  // console.log(Object.keys(obj2),'obj2')
+  // if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+  //   return false;
+  // }
+  
 
-  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
-    return false;
-  }
+  for (let obj1Key in obj1) {
+    if (isObject(obj1[obj1Key])) {
+      // console.log(isObject(obj1[obj1Key]), 'am i obj?')
+      //console.log(obj1[obj1Key], 'obj1 key')
+      //  console.log(obj2[obj1Key], "obj2 key")
+      // console.log(Object.keys(obj1[obj1Key]))
+      // console.log(Object.keys(obj2[obj1Key]))
 
-  for (let obj1Key of Object.keys(obj1)) {
-    // console.log(obj1[obj1Key], 'obj1 key')
-    // console.log(obj2[obj1Key], "obj2 key")
-
-    //console.log(Array.isArray(obj1[obj1Key]), "is array?");
-    if (Array.isArray(obj1[obj1Key])) {
+      if (!isObject(obj2[obj1Key])) {
+        return false;
+      }
+      if (!eqObjects(obj1[obj1Key], obj2[obj1Key])){    //******recursion!!!! */
+        return false
+      };
+    } else if (Array.isArray(obj1[obj1Key])) {
       // console.log(obj1[obj1Key], 'obj one key')
       // console.log(obj2[obj1Key], 'obj two key')
       // console.log(eqArrays(obj1[obj1Key], obj2[obj1Key]))
+
       if (!eqArrays(obj1[obj1Key], obj2[obj1Key])) {
         return false;
       }
-    } else if (obj1[obj1Key] !== obj2[obj1Key]) {
-      return false;
+    } else {
+      if (obj1[obj1Key] !== obj2[obj1Key]) {
+        return false;
+      }
     }
   }
-
   return true;
 };
 
