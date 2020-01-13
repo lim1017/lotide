@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+const assertArrayEqual = require('./assertArraysEqual');
 
 
 const tail = function(arr) {
@@ -9,6 +9,6 @@ const tail = function(arr) {
 let result = tail([1, 2, 3, 4]);
 console.log(result);
 
-
+// assertArrayEqual(tail([1, 2, 3, 4]),[2,3,4])
 
 module.exports = tail

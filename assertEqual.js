@@ -12,4 +12,4 @@ const assertEqual = function(actual, expected) {
 // assertEqual(143, 1);
 
 
-module.exports = assertEqual;
+module.exports = assertEqual
