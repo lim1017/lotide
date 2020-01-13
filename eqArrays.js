@@ -1,9 +1,4 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)){
-    console.log("match")
-  }else console.log('no match')
-};
+const assertEqual = require('./assertEqual');
 
 
 const eqArrays = function(arr1, arr2){
@@ -31,7 +26,7 @@ const eqArrays = function(arr1, arr2){
   return true
 }
 
-
+module.exports = eqArrays
 
 
 // // TEST CODE
@@ -39,9 +34,9 @@ const eqArrays = function(arr1, arr2){
 // assertEqual([1, 2, 3], [3, 2, 1]) // => false
 
 // console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-// console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+// // console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
 
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
+// console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])) // => true
 
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
-console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
+// console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])) // => false
+// console.log(eqArrays([[2, 3], [4]], [[2, 3], 4])) // => false
