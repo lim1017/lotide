@@ -21,6 +21,8 @@ const countLetters = function(countThisString) {
   return finalOP;
 };
 
-console.log(countLetters("lighthouse in the house"));
+// console.log(countLetters("lighthouse in the house"));
 
-assertEqual(countLetters("lighthouse in the house").h, 4)
+// assertEqual(countLetters("lighthouse in the house").h, 4)
+
+module.exports=countLetters

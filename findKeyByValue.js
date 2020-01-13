@@ -27,6 +27,8 @@ const bestTVShowsByGenre = {
   drama:  "The Wire"
 };
 
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
+// console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"));
 
 // assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), 'drama')
+
+module.exports=findKeyByValue

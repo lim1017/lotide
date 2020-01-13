@@ -40,6 +40,8 @@ const letterPositions = function(positionsInString) {
   return finalOP;
 };
 
-console.log(letterPositions("lighthouse in the house"));
+// console.log(letterPositions("lighthouse in the house"));
 
-assertArrayEqual(letterPositions("lighthouse in the house").e, [ 9, 16, 22 ])
+// assertArrayEqual(letterPositions("lighthouse in the house").e, [ 9, 16, 22 ])
+
+module.exports=letterPositions

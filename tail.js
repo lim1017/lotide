@@ -7,7 +7,7 @@ const tail = function(arr) {
 };
 
 let result = tail([1, 2, 3, 4]);
-console.log(result);
+// console.log(result);
 
 // assertArrayEqual(tail([1, 2, 3, 4]),[2,3,4])
 
